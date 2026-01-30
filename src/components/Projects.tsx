@@ -71,9 +71,12 @@ function TiltCard({ children }: { children: React.ReactNode }) {
     const mouseY = useSpring(y, { stiffness: 500, damping: 100 });
 
     function onMouseMove(e: React.MouseEvent) {
-        // Don't interfere with link clicks
+        // Don't interfere with link clicks - check for links, SVGs, and their children
         const target = e.target as HTMLElement;
-        if (target.tagName === 'A' || target.closest('a')) {
+        if (target.tagName === 'A' ||
+            target.tagName === 'svg' ||
+            target.tagName === 'path' ||
+            target.closest('a')) {
             return;
         }
 
