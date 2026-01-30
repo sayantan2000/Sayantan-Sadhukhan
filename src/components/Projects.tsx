@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ExternalLink, Gamepad2 } from "lucide-react";
-import React from "react";
+import React, { useRef } from "react";
 import ImageCarousel from "./ImageCarousel";
 
 // Define project type to include optional images
@@ -62,46 +62,52 @@ const projects: Project[] = [
     }
 ];
 
-// Tilt Card Component
+// Tilt Card Component - Rewritten to not block any clicks
 function TiltCard({ children }: { children: React.ReactNode }) {
+    const ref = useRef<HTMLDivElement>(null);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
     const mouseX = useSpring(x, { stiffness: 500, damping: 100 });
     const mouseY = useSpring(y, { stiffness: 500, damping: 100 });
 
-    function onMouseMove(e: React.MouseEvent) {
-        // Don't interfere with link clicks - check for links, SVGs, and their children
-        const target = e.target as HTMLElement;
-        if (target.tagName === 'A' ||
-            target.tagName === 'svg' ||
-            target.tagName === 'path' ||
-            target.closest('a')) {
-            return;
-        }
+    React.useEffect(() => {
+        const handleMouseMove = (e: MouseEvent) => {
+            if (!ref.current) return;
 
-        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-        x.set(e.clientX - left - width / 2);
-        y.set(e.clientY - top - height / 2);
-    }
+            const rect = ref.current.getBoundingClientRect();
+            const isHovering = (
+                e.clientX >= rect.left &&
+                e.clientX <= rect.right &&
+                e.clientY >= rect.top &&
+                e.clientY <= rect.bottom
+            );
+
+            if (isHovering) {
+                x.set(e.clientX - rect.left - rect.width / 2);
+                y.set(e.clientY - rect.top - rect.height / 2);
+            } else {
+                x.set(0);
+                y.set(0);
+            }
+        };
+
+        document.addEventListener('mousemove', handleMouseMove);
+        return () => document.removeEventListener('mousemove', handleMouseMove);
+    }, [x, y]);
 
     const rotateX = useTransform(mouseY, [-300, 300], [10, -10]);
     const rotateY = useTransform(mouseX, [-300, 300], [-10, 10]);
 
     return (
-        <motion.div
-            style={{ perspective: 1000, transformStyle: "preserve-3d" }}
-            onMouseMove={onMouseMove}
-            onMouseLeave={() => { x.set(0); y.set(0); }}
-            className="h-full"
-        >
+        <div ref={ref} style={{ perspective: 1000, transformStyle: "preserve-3d" }} className="h-full">
             <motion.div
                 style={{ rotateX, rotateY }}
                 className="h-full bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:shadow-[0_0_50px_rgba(139,92,246,0.3)] hover:border-purple-500/50 transition-colors duration-300 group flex flex-col relative"
             >
                 {children}
             </motion.div>
-        </motion.div>
+        </div>
     );
 }
 
