@@ -70,10 +70,16 @@ function TiltCard({ children }: { children: React.ReactNode }) {
     const mouseX = useSpring(x, { stiffness: 500, damping: 100 });
     const mouseY = useSpring(y, { stiffness: 500, damping: 100 });
 
-    function onMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent) {
-        const { left, top, width, height } = currentTarget.getBoundingClientRect();
-        x.set(clientX - left - width / 2);
-        y.set(clientY - top - height / 2);
+    function onMouseMove(e: React.MouseEvent) {
+        // Don't interfere with link clicks
+        const target = e.target as HTMLElement;
+        if (target.tagName === 'A' || target.closest('a')) {
+            return;
+        }
+
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        x.set(e.clientX - left - width / 2);
+        y.set(e.clientY - top - height / 2);
     }
 
     const rotateX = useTransform(mouseY, [-300, 300], [10, -10]);
