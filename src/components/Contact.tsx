@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Github } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -47,10 +47,22 @@ export default function Contact() {
                             </div>
                             <span className="text-slate-400 group-hover:text-cyan-400 transition-colors font-medium">Kolkata, India</span>
                         </motion.div>
+                        <motion.a
+                            href="https://github.com/sayantan2000"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ y: -5, scale: 1.05 }}
+                            className="flex flex-col items-center gap-4 group cursor-pointer"
+                        >
+                            <div className="p-5 bg-slate-900 rounded-full group-hover:bg-slate-700 transition-colors border border-slate-800 group-hover:border-slate-600 shadow-lg group-hover:shadow-slate-500/50">
+                                <Github size={28} className="text-slate-400 group-hover:text-white transition-colors" />
+                            </div>
+                            <span className="text-slate-400 group-hover:text-slate-300 transition-colors font-medium">GitHub</span>
+                        </motion.a>
                     </div>
 
                     <footer className="text-slate-600 text-sm">
-                        <p>© {new Date().getFullYear()} Sayantan Sadhukhan. Engineered with React & Tailwind.</p>
+                        <p>© {new Date().getFullYear()} Sayantan Sadhukhan.</p>
                     </footer>
                 </motion.div>
             </div>
