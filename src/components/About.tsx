@@ -41,7 +41,7 @@ export default function About() {
                         className="bg-slate-900/50 p-8 md:p-10 rounded-2xl border border-slate-800 backdrop-blur-sm shadow-xl shadow-indigo-900/5 hover:border-indigo-500/30 transition-colors duration-500"
                     >
                         <p className="text-lg text-slate-300 leading-relaxed mb-8">
-                            I am a Software Engineer with <strong className="text-white">4+ years of experience</strong> building real-time interactive systems using <strong className="text-white">C#</strong> and performance-critical architectures. My expertise lies in designing scalable client-server systems, managing state synchronization, and implementing runtime optimizations for complex applications in gaming and simulations.
+                            I am a Software Engineer with <strong className="text-white">3+ years of experience</strong> building real-time interactive systems using <strong className="text-white">C#</strong> and performance-critical architectures. My expertise lies in designing scalable client-server systems, managing state synchronization, and implementing runtime optimizations for complex applications in gaming and simulations.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-8 mt-8 border-t border-slate-800 pt-8">
