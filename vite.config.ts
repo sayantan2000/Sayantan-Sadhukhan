@@ -8,5 +8,15 @@ export default defineConfig({
   base: '/Sayantan-Sadhukhan/',
   server: {
     host: true,
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-three': ['three', '@react-three/fiber', '@react-three/drei'],
+          'vendor-animation': ['framer-motion', 'lucide-react'],
+        }
+      }
+    }
   }
 })
