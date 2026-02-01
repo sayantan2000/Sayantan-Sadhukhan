@@ -2,6 +2,7 @@ import { useRef, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Float, Icosahedron } from '@react-three/drei'
 import * as THREE from 'three'
+import { useTheme } from '../context/ThemeContext'
 
 const NEON_COLORS = ["#06b6d4", "#5b9df3", "#458af1", "#6366f1"];
 
@@ -152,11 +153,17 @@ function FloatingShapes() {
 }
 
 export default function Wormhole() {
+    const { theme } = useTheme();
+
+    // Determine the actual background color based on theme and system preference
+    const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const bgColor = isDark ? '#020617' : '#f8fafc'; // slate-950 vs slate-50
+
     return (
         <div className="absolute inset-0 z-0">
             <Canvas camera={{ position: [0, 0, 5], fov: 60 }} gl={{ antialias: false, alpha: false }}>
-                <color attach="background" args={['#020617']} />
-                <ambientLight intensity={0.5} />
+                <color attach="background" args={[bgColor]} />
+                <ambientLight intensity={isDark ? 0.5 : 1} />
                 <DebrisField />
                 <FloatingShapes />
             </Canvas>

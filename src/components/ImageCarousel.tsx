@@ -43,7 +43,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
 
     return (
         <div className="relative w-full h-full group">
-            <div className="absolute inset-0 bg-slate-900">
+            <div className="absolute inset-0 bg-slate-100 dark:bg-slate-900">
                 <AnimatePresence mode="wait">
                     {isCurrentVideo ? (
                         <motion.video

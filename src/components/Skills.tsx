@@ -51,7 +51,7 @@ const itemVariants = {
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 bg-slate-950 text-white relative overflow-hidden">
+        <section id="skills" className="py-24 bg-gradient-to-b from-white/20 to-slate-50/10 dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-white relative overflow-hidden transition-all duration-700">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 p-32 bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 p-32 bg-cyan-600/5 blur-[120px] rounded-full pointer-events-none" />
@@ -63,8 +63,8 @@ export default function Skills() {
                     viewport={{ once: true }}
                     className="mb-16 text-center"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">Technical Arsenal</h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto text-lg">Core technologies and competencies driven by years of real-time application development.</p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400">Technical Arsenal</h2>
+                    <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">Core technologies and competencies driven by years of real-time application development.</p>
                 </motion.div>
 
                 <motion.div
@@ -84,21 +84,23 @@ export default function Skills() {
                                 default: { duration: 0.3 }
                             }}
                             whileHover={{ scale: 1.05, borderColor: "rgba(99, 102, 241, 0.4)", boxShadow: "0 0 20px rgba(99, 102, 241, 0.2)" }}
-                            className="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 transition-all duration-300 group backdrop-blur-sm shadow-lg hover:shadow-indigo-500/10"
+                            className="bg-white/10 dark:bg-slate-900/50 p-6 rounded-3xl border-t border-l border-white/70 dark:border-slate-800 border-b border-r border-white/10 transition-all duration-300 group backdrop-blur-3xl shadow-[0_25px_50px_-12px_rgba(31,38,135,0.08)] hover:shadow-indigo-500/20 relative overflow-hidden"
                         >
+                            {/* Specular Highlight Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/15 pointer-events-none" />
                             <div className="flex items-center gap-4 mb-6">
                                 <motion.div
                                     whileHover={{ rotate: 360 }}
                                     transition={{ duration: 0.6 }}
-                                    className="p-3 rounded-xl bg-slate-800 group-hover:bg-indigo-500/20 text-indigo-400 transition-colors shadow-lg"
+                                    className="p-3 rounded-xl bg-white/80 dark:bg-slate-800 group-hover:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 transition-colors shadow-sm dark:shadow-lg"
                                 >
                                     <skill.icon size={28} />
                                 </motion.div>
-                                <h3 className="text-xl font-bold text-slate-200 group-hover:text-white transition-colors">{skill.category}</h3>
+                                <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-white transition-colors">{skill.category}</h3>
                             </div>
                             <ul className="space-y-3">
                                 {skill.items.map((item, idx) => (
-                                    <li key={idx} className="flex items-center gap-3 text-slate-400 text-sm group-hover:text-slate-300 transition-colors">
+                                    <li key={idx} className="flex items-center gap-3 text-slate-600 dark:text-slate-400 text-sm group-hover:text-slate-900 dark:group-hover:text-slate-300 transition-colors">
                                         <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full shadow-[0_0_8px_rgba(99,102,241,0.5)] group-hover:shadow-[0_0_12px_rgba(168,85,247,0.8)] transition-all" />
                                         {item}
                                     </li>

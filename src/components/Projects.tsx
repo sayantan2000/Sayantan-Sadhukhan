@@ -68,8 +68,10 @@ function TiltCard({ children }: { children: React.ReactNode }) {
         <motion.div
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="h-full bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:shadow-[0_0_50px_rgba(139,92,246,0.2)] hover:border-purple-500/30 transition-colors duration-300 group flex flex-col relative"
+            className="h-full bg-white/10 dark:bg-slate-900 border-t border-l border-white/70 dark:border-slate-800 border-b border-r border-white/10 rounded-3xl overflow-hidden hover:shadow-[0_25px_50px_-12px_rgba(31,38,135,0.12)] hover:border-purple-400/50 dark:hover:border-purple-500/30 transition-all duration-500 group flex flex-col relative backdrop-blur-3xl"
         >
+            {/* Specular Highlight Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/20 pointer-events-none" />
             {children}
         </motion.div>
     );
@@ -77,22 +79,19 @@ function TiltCard({ children }: { children: React.ReactNode }) {
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-24 bg-slate-950 text-white relative">
+        <section id="projects" className="py-24 bg-gradient-to-b from-white/20 to-slate-50/10 dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-white relative overflow-hidden transition-all duration-700">
             <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none animate-pulse" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-pink-900/10 rounded-full blur-[120px] pointer-events-none animate-pulse" />
 
-            {/* Container and Header ... */}
-
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
-                {/* Header ... */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">Featured Projects</h2>
-                    <p className="text-slate-400 text-lg">Highlights of technical challenges & solutions</p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-pink-700 dark:from-purple-400 dark:to-pink-400">Featured Projects</h2>
+                    <p className="text-slate-600 dark:text-slate-400 text-lg">Highlights of technical challenges & solutions</p>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ perspective: "1000px" }}>
@@ -106,7 +105,7 @@ export default function Projects() {
                             className="h-full"
                         >
                             <TiltCard>
-                                <div className="h-56 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center group-hover:from-indigo-900/20 group-hover:to-purple-900/20 transition-colors relative overflow-hidden">
+                                <div className="h-56 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center group-hover:from-indigo-900/10 dark:group-hover:from-indigo-900/20 group-hover:to-purple-900/10 dark:group-hover:to-purple-900/20 transition-colors relative overflow-hidden">
                                     {project.images && project.images.length > 0 ? (
                                         <div className="w-full h-full relative z-20"> {/* Ensure carousel is interactive */}
                                             <ImageCarousel images={project.images} />
@@ -118,22 +117,22 @@ export default function Projects() {
                                                 animate={{ y: [0, -5, 0] }}
                                                 transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
                                             >
-                                                <project.icon size={64} className="text-slate-700 group-hover:text-indigo-400 transition-colors duration-500 transform group-hover:scale-110" />
+                                                <project.icon size={64} className="text-slate-300 dark:text-slate-700 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-500 transform group-hover:scale-110" />
                                             </motion.div>
                                         </>
                                     )}
                                 </div>
 
-                                <div className="p-6 flex-1 flex flex-col bg-slate-900/80 backdrop-blur-sm">
-                                    <div className="text-xs font-bold text-indigo-400 mb-2 uppercase tracking-wider">{project.category}</div>
-                                    <h3 className="text-2xl font-bold mb-3 text-white flex items-center gap-2 group-hover:text-purple-300 transition-colors">
+                                <div className="p-6 flex-1 flex flex-col backdrop-blur-3xl relative z-10">
+                                    <div className="text-xs font-bold text-indigo-600 dark:text-indigo-400 mb-2 uppercase tracking-wider">{project.category}</div>
+                                    <h3 className="text-2xl font-bold mb-3 text-slate-900 dark:text-white flex items-center gap-2 group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
                                         {project.title}
                                         {project.link && (
                                             <a
                                                 href={project.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-slate-500 hover:text-white transition-colors"
+                                                className="text-slate-500 hover:text-indigo-600 dark:hover:text-white transition-colors"
                                                 style={{ position: 'relative', zIndex: 50 }}
                                                 title="View Project"
                                                 onClick={(e) => {
@@ -146,12 +145,12 @@ export default function Projects() {
                                             </a>
                                         )}
                                     </h3>
-                                    <p className="text-slate-400 text-sm mb-6 leading-relaxed flex-1">
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed flex-1">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2 mt-auto">
                                         {project.tags.map(tag => (
-                                            <span key={tag} className="text-xs px-2 py-1 bg-slate-800 group-hover:bg-indigo-900/30 text-slate-300 group-hover:text-indigo-200 rounded-md border border-slate-700 group-hover:border-indigo-500/30 transition-all">
+                                            <span key={tag} className="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-800 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-900/30 text-slate-600 dark:text-slate-300 group-hover:text-indigo-700 dark:group-hover:text-indigo-200 rounded-md border border-slate-200 dark:border-slate-700 group-hover:border-indigo-500/30 transition-all">
                                                 {tag}
                                             </span>
                                         ))}
@@ -163,5 +162,5 @@ export default function Projects() {
                 </div>
             </div>
         </section>
-    )
+    );
 }
