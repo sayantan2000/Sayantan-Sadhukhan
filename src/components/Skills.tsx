@@ -3,34 +3,34 @@ import { Code2, Server, Gauge, Network, PenTool, Database } from "lucide-react";
 
 const skills = [
     {
-        category: "Programming",
+        category: "Programming & Core",
         icon: Code2,
-        items: ["C#", "C++", "Object-Oriented Design", "Multithreading"]
+        items: ["C#", "C++", "ScriptableObjects", "Addressables"]
     },
     {
-        category: "Systems",
+        category: "VR & Platforms",
         icon: Server,
-        items: ["Real-time Pipelines", "Client-Server Arch", "State Synchronization", "Modular Components"]
+        items: ["Meta Quest SDK", "XR Interaction Toolkit", "Android (Mobile)", "URP"]
     },
     {
         category: "Performance",
         icon: Gauge,
-        items: ["CPU/GPU Profiling", "Memory Optimization", "Runtime Stability", "Garbage Collection mgmt"]
+        items: ["CPU/GPU Profiling", "Draw Call Batching", "Object Pooling", "GC-Friendly Patterns"]
     },
     {
         category: "Networking",
         icon: Network,
-        items: ["Distributed Systems", "Bandwidth Optimization", "Latency Handling", "Deterministic Flows"]
+        items: ["Deterministic Lockstep", "Bandwidth Optimization", "Client-Server Architecture", "Latency Handling"]
     },
     {
-        category: "Tools & Platforms",
+        category: "Tools & DevOps",
         icon: PenTool,
-        items: ["Unity Engine", "Profiling Tools", "Visual Studio", "Git"]
+        items: ["Unity 2D/3D/VR", "Git", "Firebase Crashlytics", "Android Build Pipeline"]
     },
     {
-        category: "Foundations",
+        category: "Graphics & UI",
         icon: Database,
-        items: ["Data Structures", "Clean Architecture", "System Design", "Debugging"]
+        items: ["UGUI Architecture", "DOTween / PrimeTween", "Texture Atlasing", "Particle Systems"]
     }
 ];
 

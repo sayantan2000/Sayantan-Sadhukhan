@@ -17,6 +17,13 @@ const itemVariants = {
 };
 
 export default function About() {
+    const calculateExperience = () => {
+        const start = new Date('2022-03-22');
+        const now = new Date();
+        const diff = (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+        return Math.round(diff); // Rounds to nearest whole number, e.g., 4
+    };
+
     return (
         <section id="about" className="py-24 bg-gradient-to-b from-white/20 to-slate-50/10 dark:from-slate-950 dark:to-slate-900 text-slate-900 dark:text-white relative border-t border-white/50 dark:border-slate-800 overflow-hidden transition-all duration-700">
             <div className="absolute top-1/2 left-0 w-64 h-64 bg-cyan-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -43,7 +50,7 @@ export default function About() {
                         {/* Specular Highlight Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none" />
                         <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
-                            I am a Software Engineer with <strong className="text-slate-950 dark:text-white">3+ years of experience</strong> building real-time interactive systems using <strong className="text-slate-950 dark:text-white">C#</strong> and performance-critical architectures. My expertise lies in designing scalable client-server systems, managing state synchronization, and implementing runtime optimizations for complex applications in gaming and simulations.
+                            I am a Unity Game Developer with <strong className="text-slate-950 dark:text-white">{calculateExperience()}+ years of professional experience</strong> building and shipping multiplayer, single-player, and VR titles across mobile and Meta Quest platforms. My deep expertise lies in <strong className="text-slate-950 dark:text-white">C# gameplay programming</strong>, deterministic state synchronization, and performance profiling for resource-constrained devices.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-8 mt-8 border-t border-slate-200 dark:border-slate-800 pt-8">
@@ -55,8 +62,8 @@ export default function About() {
                                     <Layers size={24} />
                                 </div>
                                 <div className="relative z-10">
-                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-cyan-400 transition-colors">Systems Architecture</h3>
-                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Specialized in modular design, clean architecture, and identifying bottlenecks in CPU, GPU, and memory usage to ensure stability.</p>
+                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-cyan-400 transition-colors">Game Architecture</h3>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Comfortable owning features end-to-end—from translating game designs into modular C# architectures using ScriptableObjects to final system optimizations.</p>
                                 </div>
                             </motion.div>
                             <motion.div
@@ -67,8 +74,8 @@ export default function About() {
                                     <Zap size={24} />
                                 </div>
                                 <div className="relative z-10">
-                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-purple-400 transition-colors">Real-Time Performance</h3>
-                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Expert strategies for bandwidth optimization, latency handling, prediction, and ensuring smooth runtime in distributed environments.</p>
+                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-purple-400 transition-colors">VR & Multiplayer Systems</h3>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Deep integration with Meta Quest SDK and custom client-server architectures, focusing on latency handling, synchronization, and hitting 72 FPS targets in VR.</p>
                                 </div>
                             </motion.div>
                         </div>

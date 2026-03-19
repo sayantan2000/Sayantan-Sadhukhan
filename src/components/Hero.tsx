@@ -52,7 +52,7 @@ export default function Hero() {
                         transition={{ delay: 0.2 }}
                         className="inline-block mb-6 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 backdrop-blur-md"
                     >
-                        <span className="text-indigo-400 font-mono text-sm tracking-wider">GAMEPLAY & SYSTEMS ENGINEER</span>
+                        <span className="text-indigo-400 font-mono text-sm tracking-wider">UNITY GAME DEVELOPER | MULTIPLAYER & VR</span>
                     </motion.div>
 
                     <motion.h1
@@ -76,7 +76,7 @@ export default function Hero() {
                     >
                         Crafting high-performance <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 font-bold">Virtual Realities</span> and robust
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 font-bold"> Multiplayer Architectures</span>.
-                        <br />Specialized in C#, Unity, and low-latency systems.
+                        <br />Specialized in C#, Unity 2D/3D, and Meta Quest SDKs.
                     </motion.p>
 
                     {/* Floating Icons with continuous animation */}
@@ -88,7 +88,7 @@ export default function Hero() {
                             className="flex flex-col items-center gap-2 cursor-pointer transition-colors"
                         >
                             <Gamepad2 size={40} />
-                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">GAME DEV</span>
+                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">UNITY 3D</span>
                         </motion.div>
                         <motion.div
                             animate={{ y: [0, -15, 0] }}
@@ -97,7 +97,7 @@ export default function Hero() {
                             className="flex flex-col items-center gap-2 cursor-pointer transition-colors"
                         >
                             <Code2 size={40} />
-                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">SYSTEMS</span>
+                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">GAMEPLAY</span>
                         </motion.div>
                         <motion.div
                             animate={{ y: [0, -12, 0] }}
@@ -106,7 +106,7 @@ export default function Hero() {
                             className="flex flex-col items-center gap-2 cursor-pointer transition-colors"
                         >
                             <Network size={40} />
-                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">NETWORKING</span>
+                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">MULTIPLAYER</span>
                         </motion.div>
                     </div>
 

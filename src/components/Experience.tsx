@@ -4,20 +4,20 @@ import { Briefcase, Calendar, ChevronRight } from "lucide-react";
 const experiences = [
     {
         company: "Web Skitters Technology Solutions Pvt. Ltd.",
-        role: "Software Engineer (Real-Time Applications)",
+        role: "Unity Game Developer",
         period: "Mar 2023 – Present",
         description: [
-            "Architected scalable, real-time C# systems for high-traffic applications, significantly reducing CPU overhead and memory fragmentation.",
-            "Engineered fault-tolerant networking modules and cross-platform compatibility layers to ensure stability across diverse hardware environments."
+            "Architected and developed real-time multiplayer board games and modular mini-game frameworks using Unity 2D, C#, and Addressables.",
+            "Designed deterministic turn-based synchronization systems and custom client-server networking layers, handling complex game logic and visual feedback."
         ]
     },
     {
         company: "Biswa Games Pvt. Ltd.",
-        role: "Software Engineer (Networked Systems)",
+        role: "Unity Game Developer",
         period: "Mar 2022 – Feb 2023",
         description: [
-            "Developed deterministic synchronization logic for multiplayer environments, mitigating latency issues to deliver seamless real-time user experiences.",
-            "Optimized data serialization and transmission protocols, reducing bandwidth consumption while maintaining high-fidelity state synchronization."
+            "Developed core multiplayer systems for a shared virtual world on Meta Quest, handling avatar synchronization, spatial voice, and user session management.",
+            "Profiled and optimized Unity's Universal Render Pipeline (URP) to maintain a locked 72 FPS on Quest hardware while utilizing Meta Quest SDKs."
         ]
     }
 ];
