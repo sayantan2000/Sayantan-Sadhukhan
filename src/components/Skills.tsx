@@ -5,7 +5,7 @@ const skills = [
     {
         category: "Programming & Core",
         icon: Code2,
-        items: ["C#", "C++", "ScriptableObjects", "Addressables"]
+        items: ["C#", "C++", "ScriptableObjects", "Addressables", "Design Patterns"]
     },
     {
         category: "VR & Platforms",
@@ -25,7 +25,7 @@ const skills = [
     {
         category: "Tools & DevOps",
         icon: PenTool,
-        items: ["Unity 2D/3D/VR", "Git", "Firebase Crashlytics", "Android Build Pipeline"]
+        items: ["Unity 2D/3D/VR", "Git", "Firebase Crashlytics", "Android Build Pipeline", "Ios Build pipeline"]
     },
     {
         category: "Graphics & UI",
