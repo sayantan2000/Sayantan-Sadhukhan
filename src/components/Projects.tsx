@@ -101,6 +101,33 @@ const projects: Project[] = [
             `${import.meta.env.BASE_URL}media/fun_arena/Media_1.webp`,
             `${import.meta.env.BASE_URL}media/fun_arena/Media_2.webp`
         ]
+    },
+    {
+        title: "Odyssey",
+        category: "Interactive Media",
+        description: "An immersive multimedia interactive experience focusing on stunning visuals and fluid animations.",
+        workDone: [
+            "Architected scalable infrastructure for media playback.",
+            "Implemented custom shaders for visual fidelity.",
+            "Optimized asset loading times."
+        ],
+        challenges: [
+            "Seamless media switching without visual stutter.",
+            "Balancing high resolution assets with memory constraints."
+        ],
+        techniques: [
+            "Custom Shaders",
+            "Asset Preloading",
+            "Memory Pooling"
+        ],
+        tags: ["Interactive", "Multimedia", "Optimization"],
+        icon: Zap,
+        images: [
+            `${import.meta.env.BASE_URL}media/Odyssey/Dreamvale Lab.mp4`,
+            `${import.meta.env.BASE_URL}media/Odyssey/Eco 2.mp4`,
+            `${import.meta.env.BASE_URL}media/Odyssey/Mirror.mp4`,
+            `${import.meta.env.BASE_URL}media/Odyssey/Ripple.mp4`
+        ]
     }
 ];
 
