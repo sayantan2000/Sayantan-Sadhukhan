@@ -158,6 +158,30 @@ const projects: Project[] = [
             `${import.meta.env.BASE_URL}media/BibleRun/Image Sequence_002_0718.png`,
             `${import.meta.env.BASE_URL}media/BibleRun/Bible Run.mp4`
         ]
+    },
+    {
+        title: "Aquatis Survival",
+        category: "Survival Adventure Game",
+        description: "A deep-sea survival game featuring 100 levels of progression. Players farm materials to construct and upgrade their base, unlock unique characters, and utilize diverse offensive and defensive abilities to conquer aquatic challenges.",
+        workDone: [
+            "Programmed a comprehensive 100-level progression and achievement unlocking system.",
+            "Developed an intricate crafting and base-building mechanic utilizing farmed in-game materials.",
+            "Designed and implemented unique offensive and defensive ability kits for multiple unlockable characters."
+        ],
+        challenges: [
+            "Balancing material drop rates and progression pacing across 100 distinct difficulty tiers.",
+            "Ensuring base-building mechanics remained performant while maintaining complex save states."
+        ],
+        techniques: [
+            "Progression System Architecture",
+            "Inventory & Resource Management",
+            "Ability System Integration"
+        ],
+        tags: ["Unity3D", "Survival", "Base Building", "Level Progression", "Resource Management"],
+        icon: Gamepad2,
+        images: [
+            `${import.meta.env.BASE_URL}media/AquatisSurvival/Aquatissurvival.mp4`
+        ]
     }
 ];
 
