@@ -43,8 +43,8 @@ const projects: Project[] = [
         images: [
             `${import.meta.env.BASE_URL}media/the_verse/39001722_845351934060843_1219799958268738039_n.webp`,
             `${import.meta.env.BASE_URL}media/the_verse/39003227_934337464713960_3147103992867123578_n.webp`,
-            `${import.meta.env.BASE_URL}media/the_verse/39001679_353647927036056_5740262429056735628_n.mp4`,
-            `${import.meta.env.BASE_URL}media/the_verse/39036613_1432534167666537_6576254558792309383_n.webp`
+            `${import.meta.env.BASE_URL}media/the_verse/39036613_1432534167666537_6576254558792309383_n.webp`,
+            `${import.meta.env.BASE_URL}media/the_verse/39001679_353647927036056_5740262429056735628_n.mp4`
         ]
     },
     {
@@ -66,7 +66,7 @@ const projects: Project[] = [
             "Custom Byte-Buffer Packing (<128 bytes/turn)",
             "Deep Profiling & GC Stress Mitigation"
         ],
-        tags: ["Multiplayer", "C#", "Custom Networking", "Android"],
+        tags: ["Multiplayer", "C#", "Custom Networking", "Android", "Environment Design", "Unity3D", "MObile"],
         link: "https://play.google.com/store/apps/details?id=com.webskitters.ludolooters",
         icon: Network,
         images: [
@@ -94,7 +94,7 @@ const projects: Project[] = [
             "Texture Atlasing & Sprite Batching",
             "Asynchronous Scene Loading"
         ],
-        tags: ["Mobile", "Architecture", "Optimization", "ScriptableObjects"],
+        tags: ["Mobile", "Architecture", "Optimization", "ScriptableObjects", "Unity3D"],
         link: "https://play.google.com/store/apps/details?id=com.webskitters.FunArena",
         icon: Gamepad2,
         images: [
@@ -120,7 +120,7 @@ const projects: Project[] = [
             "Asset Preloading",
             "Memory Pooling"
         ],
-        tags: ["Interactive", "Multimedia", "Optimization"],
+        tags: ["Interactive", "Multimedia", "Optimization", "Unity3D", "Mobile", "Environment Design"],
         icon: Zap,
         images: [
             `${import.meta.env.BASE_URL}media/Odyssey/Dreamvale Lab.mp4`,
