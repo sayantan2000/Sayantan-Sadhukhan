@@ -50,7 +50,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
                             key={currentIndex}
                             ref={videoRef}
                             src={currentItem}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                             autoPlay
                             muted
                             playsInline
@@ -65,7 +65,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
                             key={currentIndex}
                             src={currentItem}
                             alt={`Slide ${currentIndex + 1}`}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}

@@ -128,6 +128,36 @@ const projects: Project[] = [
             `${import.meta.env.BASE_URL}media/Odyssey/Mirror.mp4`,
             `${import.meta.env.BASE_URL}media/Odyssey/Ripple.mp4`
         ]
+    },
+    {
+        title: "Bible Run",
+        category: "Endless Runner Game",
+        description: "An immersive endless runner game set under an ocean parted in two halves, featuring vibrant marine life and stunning underwater environment aesthetics.",
+        workDone: [
+            "Programmed the core endless runner progression and movement mechanics.",
+            "Optimized procedural generation for the continuously parting ocean environment.",
+            "Integrated high-fidelity marine life and environmental beauty assets."
+        ],
+        challenges: [
+            "Maintaining fluid performance on mobile devices despite dense visual environments.",
+            "Balancing gameplay speed and difficulty scaling with asset spawning."
+        ],
+        techniques: [
+            "Procedural Environment Generation",
+            "Object Pooling",
+            "Mobile Performance Profiling"
+        ],
+        tags: ["Unity3D", "Mobile", "Endless Runner", "Environment Design"],
+        icon: Gamepad2,
+        images: [
+
+            `${import.meta.env.BASE_URL}media/BibleRun/Image Sequence_001_0138.png`,
+            `${import.meta.env.BASE_URL}media/BibleRun/Image Sequence_002_0600.png`,
+            `${import.meta.env.BASE_URL}media/BibleRun/Image Sequence_002_0657.png`,
+            `${import.meta.env.BASE_URL}media/BibleRun/Image Sequence_002_0702.png`,
+            `${import.meta.env.BASE_URL}media/BibleRun/Image Sequence_002_0718.png`,
+            `${import.meta.env.BASE_URL}media/BibleRun/Bible Run.mp4`
+        ]
     }
 ];
 
@@ -214,7 +244,7 @@ export default function Projects() {
                                     <p className="text-slate-600 dark:text-slate-300 text-sm mb-8 leading-relaxed flex-1">
                                         {project.description}
                                     </p>
-                                    
+
                                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-200/50 dark:border-slate-700/50">
                                         <div className="flex flex-wrap gap-2">
                                             {project.tags.slice(0, 3).map(tag => (
@@ -257,7 +287,7 @@ export default function Projects() {
                             className="bg-white dark:bg-slate-900 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl border border-white/20 dark:border-slate-700 relative"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <button 
+                            <button
                                 onClick={() => setSelectedProject(null)}
                                 className="absolute top-6 right-6 p-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full text-slate-600 dark:text-slate-400 transition-colors z-10"
                             >
@@ -286,7 +316,7 @@ export default function Projects() {
                                     <div className="space-y-10">
                                         <section>
                                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-5 flex items-center gap-2">
-                                                <Server className="text-indigo-500" size={24} /> 
+                                                <Server className="text-indigo-500" size={24} />
                                                 Work Completed
                                             </h3>
                                             <ul className="space-y-4">
@@ -301,7 +331,7 @@ export default function Projects() {
 
                                         <section>
                                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-5 flex items-center gap-2">
-                                                <Zap className="text-yellow-500" size={24} /> 
+                                                <Zap className="text-yellow-500" size={24} />
                                                 Technical Stack & Paradigms
                                             </h3>
                                             <div className="flex flex-wrap gap-2">
@@ -318,7 +348,7 @@ export default function Projects() {
                                     <div className="space-y-10">
                                         <section>
                                             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-5 flex items-center gap-2">
-                                                <Network className="text-pink-500" size={24} /> 
+                                                <Network className="text-pink-500" size={24} />
                                                 Engineering Challenges
                                             </h3>
                                             <div className="space-y-4">
@@ -334,7 +364,7 @@ export default function Projects() {
 
                                         {selectedProject.link && (
                                             <div className="pt-6 border-t border-slate-200 dark:border-slate-800">
-                                                <a 
+                                                <a
                                                     href={selectedProject.link}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
