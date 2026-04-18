@@ -8,6 +8,7 @@ export default defineConfig({
   base: '/Sayantan-Sadhukhan/',
   server: {
     host: true,
+    allowedHosts: true,
   },
   build: {
     chunkSizeWarningLimit: 2000,

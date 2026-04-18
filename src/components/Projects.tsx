@@ -104,7 +104,7 @@ const projects: Project[] = [
     },
     {
         title: "Odyssey",
-        category: "Interactive Media",
+        category: "EchoWorld",
         description: "An immersive multimedia interactive experience focusing on stunning visuals and fluid animations.",
         workDone: [
             "Architected scalable infrastructure for media playback.",
