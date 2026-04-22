@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "fetch-media": "python scripts/fetch-media.py",
+    "build": "npm run fetch-media && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
