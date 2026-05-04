@@ -91,10 +91,26 @@ def main():
         pass
     if needs_install:
         print(f"Installing {required_gdown}...")
-        subprocess.run(
-            [sys.executable, "-m", "pip", "install", required_gdown, "--quiet"],
-            check=True,
-        )
+        base_cmd = [sys.executable, "-m", "pip", "install", required_gdown, "--quiet"]
+        # PEP 668 environments (Vercel's uv-managed Python, some Linux
+        #   distros) refuse a plain `pip install`. Try the safest variants
+        #   in order, falling back as needed.
+        attempts = [
+            base_cmd,
+            base_cmd + ["--break-system-packages"],
+            base_cmd + ["--user", "--break-system-packages"],
+            base_cmd + ["--user"],
+        ]
+        last_err = None
+        for cmd in attempts:
+            try:
+                subprocess.run(cmd, check=True)
+                last_err = None
+                break
+            except subprocess.CalledProcessError as e:
+                last_err = e
+        if last_err is not None:
+            raise last_err
 
     # Allow callers (CI, dev) to skip the media fetch entirely.
     if os.environ.get("SKIP_FETCH_MEDIA"):
