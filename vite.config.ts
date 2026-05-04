@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/Sayantan-Sadhukhan/',
+  base: process.env.VERCEL ? '/' : '/Sayantan-Sadhukhan/',
   server: {
     host: true,
     allowedHosts: true,
