@@ -52,7 +52,7 @@ export default function Hero() {
                         transition={{ delay: 0.2 }}
                         className="inline-block mb-6 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 backdrop-blur-md"
                     >
-                        <span className="text-indigo-400 font-mono text-sm tracking-wider">UNITY GAME DEVELOPER | MULTIPLAYER & VR</span>
+                        <span className="text-indigo-400 font-mono text-sm tracking-wider">SOFTWARE ENGINEER (REAL-TIME SYSTEMS) | MULTIPLAYER & VR</span>
                     </motion.div>
 
                     <motion.h1
@@ -74,9 +74,9 @@ export default function Hero() {
                         transition={{ delay: 1.5, duration: 1 }}
                         className="text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                     >
-                        Crafting high-performance <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 font-bold">Virtual Realities</span> and robust
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 font-bold"> Multiplayer Architectures</span>.
-                        <br />Specialized in C#, Unity 2D/3D, and Meta Quest SDKs.
+                        Engineering high-performance <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 font-bold">real-time systems</span> and robust
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 font-bold"> multiplayer architectures</span>.
+                        <br />Shipping across Mobile, PC, Console, and VR — in C# and C++.
                     </motion.p>
 
                     {/* Floating Icons with continuous animation */}
@@ -88,7 +88,7 @@ export default function Hero() {
                             className="flex flex-col items-center gap-2 cursor-pointer transition-colors"
                         >
                             <Gamepad2 size={40} />
-                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">UNITY 3D</span>
+                            <span className="text-xs font-bold tracking-widest opacity-0 hover:opacity-100 transition-opacity absolute -bottom-6">REAL-TIME</span>
                         </motion.div>
                         <motion.div
                             animate={{ y: [0, -15, 0] }}

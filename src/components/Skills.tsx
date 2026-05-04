@@ -5,12 +5,12 @@ const skills = [
     {
         category: "Programming & Core",
         icon: Code2,
-        items: ["C#", "C++", "ScriptableObjects", "Addressables", "Design Patterns"]
+        items: ["C#", "C++", "OOP & SOLID", "Data-Oriented Design", "Design Patterns"]
     },
     {
-        category: "VR & Platforms",
+        category: "Platforms",
         icon: Server,
-        items: ["Meta Quest SDK", "XR Interaction Toolkit", "Android (Mobile)", "URP"]
+        items: ["Mobile (Android / iOS)", "PC (Windows)", "Console", "VR (Meta Quest)"]
     },
     {
         category: "Performance",
@@ -23,14 +23,14 @@ const skills = [
         items: ["Deterministic Lockstep", "Bandwidth Optimization", "Client-Server Architecture", "Latency Handling"]
     },
     {
-        category: "Tools & DevOps",
+        category: "Engines & Tools",
         icon: PenTool,
-        items: ["Unity 2D/3D/VR", "Git", "Firebase Crashlytics", "Android Build Pipeline", "Ios Build pipeline"]
+        items: ["Unity 2D/3D/VR", "Meta Quest SDK", "XR Interaction Toolkit", "Git", "Firebase Crashlytics", "Android & iOS Build Pipelines"]
     },
     {
         category: "Graphics & UI",
         icon: Database,
-        items: ["UGUI Architecture", "DOTween / PrimeTween", "Texture Atlasing", "Particle Systems"]
+        items: ["URP / Render Pipelines", "UGUI Architecture", "DOTween / PrimeTween", "Texture Atlasing", "Particle Systems"]
     }
 ];
 

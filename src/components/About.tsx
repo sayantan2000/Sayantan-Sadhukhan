@@ -50,7 +50,7 @@ export default function About() {
                         {/* Specular Highlight Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20 pointer-events-none" />
                         <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8">
-                            I am a Unity Game Developer with <strong className="text-slate-950 dark:text-white">{calculateExperience()}+ years of professional experience</strong> building and shipping multiplayer, single-player, and VR titles across mobile and Meta Quest platforms. My deep expertise lies in <strong className="text-slate-950 dark:text-white">C# gameplay programming</strong>, deterministic state synchronization, and performance profiling for resource-constrained devices.
+                            I am a Software Engineer specializing in real-time systems with <strong className="text-slate-950 dark:text-white">{calculateExperience()}+ years of professional experience</strong> designing and shipping multiplayer, single-player, and immersive products across <strong className="text-slate-950 dark:text-white">Mobile, PC, Console, and VR</strong> platforms. My deep expertise lies in <strong className="text-slate-950 dark:text-white">C# and C++ systems programming</strong>, deterministic state synchronization, low-latency networking, and performance engineering for resource-constrained hardware.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-8 mt-8 border-t border-slate-200 dark:border-slate-800 pt-8">
@@ -62,8 +62,8 @@ export default function About() {
                                     <Layers size={24} />
                                 </div>
                                 <div className="relative z-10">
-                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-cyan-400 transition-colors">Game Architecture</h3>
-                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Comfortable owning features end-to-end—from translating game designs into modular C# architectures using ScriptableObjects to final system optimizations.</p>
+                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-cyan-400 transition-colors">Systems Architecture</h3>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Comfortable owning features end-to-end — from translating product requirements into modular, data-driven architectures and clean APIs to final system-level optimization.</p>
                                 </div>
                             </motion.div>
                             <motion.div
@@ -74,8 +74,8 @@ export default function About() {
                                     <Zap size={24} />
                                 </div>
                                 <div className="relative z-10">
-                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-purple-400 transition-colors">VR & Multiplayer Systems</h3>
-                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Deep integration with Meta Quest SDK and custom client-server architectures, focusing on latency handling, synchronization, and hitting 72 FPS targets in VR.</p>
+                                    <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-purple-400 transition-colors">Real-Time & Multiplayer Systems</h3>
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Custom client-server and deterministic networking architectures with strict latency, synchronization, and frame-time budgets across mobile, desktop, console, and VR targets.</p>
                                 </div>
                             </motion.div>
                         </div>

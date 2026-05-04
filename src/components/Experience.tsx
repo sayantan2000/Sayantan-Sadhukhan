@@ -4,20 +4,22 @@ import { Briefcase, Calendar, ChevronRight } from "lucide-react";
 const experiences = [
     {
         company: "Web Skitters Technology Solutions Pvt. Ltd.",
-        role: "Unity Game Developer",
+        role: "Software Engineer",
+        specialty: "Real-Time Systems",
         period: "Mar 2023 – Present",
         description: [
-            "Architected and developed real-time multiplayer board games and modular mini-game frameworks using Unity 2D, C#, and Addressables.",
-            "Designed deterministic turn-based synchronization systems and custom client-server networking layers, handling complex game logic and visual feedback."
+            "Architected and shipped real-time multiplayer products and modular application frameworks across mobile platforms (Android & iOS) using C# and asset-streaming pipelines.",
+            "Designed deterministic turn-based synchronization and custom client-server networking layers, handling complex domain logic, bandwidth-tight payloads, and graceful reconnection."
         ]
     },
     {
         company: "Biswa Games Pvt. Ltd.",
-        role: "Unity Game Developer",
+        role: "Software Engineer",
+        specialty: "Real-Time Systems",
         period: "Mar 2022 – Feb 2023",
         description: [
-            "Developed core multiplayer systems for a shared virtual world on Meta Quest, handling avatar synchronization, spatial voice, and user session management.",
-            "Profiled and optimized Unity's Universal Render Pipeline (URP) to maintain a locked 72 FPS on Quest hardware while utilizing Meta Quest SDKs."
+            "Developed core multiplayer systems for a shared virtual world on standalone VR (Meta Quest), handling avatar synchronization, spatial voice, and user session management.",
+            "Profiled and optimized rendering pipelines to maintain a locked 72 FPS on resource-constrained VR hardware while integrating platform SDKs."
         ]
     }
 ];
@@ -93,7 +95,12 @@ export default function Experience() {
                                     <span className="inline-flex items-center gap-2 text-indigo-700 dark:text-indigo-300 text-xs font-bold uppercase tracking-widest mb-4 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
                                         <Calendar size={12} /> {exp.period}
                                     </span>
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{exp.role}</h3>
+                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{exp.role}</h3>
+                                    {exp.specialty && (
+                                        <span className="inline-block text-xs font-semibold uppercase tracking-wider text-purple-700 dark:text-purple-300 bg-purple-500/10 px-2.5 py-1 rounded-full border border-purple-500/20 mb-4">
+                                            {exp.specialty}
+                                        </span>
+                                    )}
                                     <h4 className="text-lg text-slate-600 dark:text-slate-400 mb-6 flex items-center gap-2 font-medium">
                                         <Briefcase size={16} className="text-purple-600 dark:text-purple-400" />
                                         {exp.company}
